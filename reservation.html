@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Reserve a Table · Luxury Vibes</title>
+  <meta name="description" content="Choose your table in the Luxury Vibes dining room and complete your reservation card.">
+  <meta name="theme-color" content="#03170b">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Crimson+Pro:ital,wght@0,500;0,600;1,500&family=Source+Sans+3:wght@400;600&display=swap">
+  <link rel="preload" as="image" href="assets/images/reservation/dining-room.webp">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/reservation.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body class="page-reservation">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <div class="nav-scrim" data-nav-close aria-hidden="true"></div>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <div class="drawer-head">
+          <button class="drawer-close" type="button" data-nav-close aria-label="Close menu">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+          </button>
+          <a class="drawer-brand" href="index.html" aria-label="Luxury Vibes Restaurant and Kitchen, home">
+            <svg viewBox="0 0 48 48" aria-hidden="true"><use href="#icon-sprig"></use></svg>
+            <span class="drawer-brand-name">Luxury Vibes</span>
+            <span class="drawer-brand-sub">Restaurant &amp; Kitchen</span>
+          </a>
+        </div>
+        <ul class="nav-list nav-list--left">
+          <li><a class="nav-link" href="index.html#home">Home</a></li>
+          <li><a class="nav-link" href="menu.html">Menu</a></li>
+          <li><a class="nav-link" href="about.html">About</a></li>
+          <li><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li><a class="nav-link is-active" href="reservation.html" aria-current="page">Reservation</a></li>
+        </ul>
+        <ul class="nav-list nav-list--right">
+          <li class="nav-action">
+            <button class="icon-action" type="button" data-open-search aria-label="Search the site" aria-haspopup="dialog">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg>
+            </button>
+          </li>
+          <li class="nav-action">
+            <a class="icon-action icon-action--bag" href="menu.html" aria-label="Browse the menu">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path class="fill" d="M5 8.5h14l-1 12.5H6L5 8.5Z"/><path d="M9 10V7a3 3 0 0 1 6 0v3"/></svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <a class="logo" href="index.html" aria-label="Luxury Vibes Restaurant and Kitchen, home page" data-no-roll>
+        <span class="logo-orb" aria-hidden="true"><span class="logo-swirl"></span><span class="logo-swirl logo-swirl--slow"></span><span class="logo-core"></span></span>
+        <svg class="logo-mark" viewBox="0 0 48 48" aria-hidden="true"><use href="#icon-sprig"></use></svg>
+        <span class="logo-name">Luxury Vibes</span>
+        <span class="logo-sub">Restaurant &amp; Kitchen</span>
+      </a>
+
+      <div class="header-actions header-actions--mobile">
+        <button class="icon-action" type="button" data-open-search aria-label="Search the site" aria-haspopup="dialog">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg>
+        </button>
+        <a class="icon-action icon-action--bag" href="menu.html" aria-label="Browse the menu">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path class="fill" d="M5 8.5h14l-1 12.5H6L5 8.5Z"/><path d="M9 10V7a3 3 0 0 1 6 0v3"/></svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section class="res-hero" aria-labelledby="res-title">
+      <div class="res-hero-light" aria-hidden="true"><span></span><span></span><span></span></div>
+      <div class="container res-hero-inner">
+        <p class="res-eyebrow">Reservations</p>
+        <h1 class="res-title" id="res-title" data-split>Book a Premium seat to be seated and till served with taste of luxury</h1>
+        <p class="res-lede">Pick any table in our dining room below and your reservation card will come to you.</p>
+        <a class="btn res-hero-cta" href="#room">
+          <span>Choose your table</span>
+          <svg class="btn-arrow" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-arrow"></use></svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- ============ DINING ROOM ============ -->
+    <section class="room-section" id="room" aria-labelledby="room-title">
+      <div class="container room-head">
+        <div class="room-head-copy">
+          <h2 class="section-title" id="room-title">The Dining Room</h2>
+          <p>Select a table to reserve it. A table with a reservation card on it is booked for part of the day, so you can still choose it for another time.</p>
+        </div>
+        <ul class="room-legend" aria-label="Table key">
+          <li><span class="legend-swatch legend-swatch--free" aria-hidden="true"></span>Available</li>
+          <li><span class="legend-swatch legend-swatch--booked" aria-hidden="true"></span>Reserved</li>
+          <li><span class="legend-swatch legend-swatch--seated" aria-hidden="true"></span>Guests seated</li>
+        </ul>
+      </div>
+
+      <div class="room-frame">
+        <div class="room-scroll" tabindex="-1">
+          <div class="room" id="room-stage">
+            <img class="room-img" src="assets/images/reservation/dining-room.webp" alt="Top-down view of the Luxury Vibes dining room: three tables for four along the top, two round tables and a long table for six in the middle, two tables for four along the banquette." width="1536" height="1024" decoding="async" fetchpriority="high">
+            <div class="room-tables" id="room-tables" role="group" aria-label="Tables"></div>
+          </div>
+        </div>
+        <p class="room-hint">Swipe sideways to see the whole room</p>
+      </div>
+
+      <div class="container room-foot">
+        <p class="room-status" id="room-status" role="status" aria-live="polite"></p>
+        <div class="bookbook">
+          <div class="bookbook-head">
+            <h3>Reservations in this browser</h3>
+            <button class="btn btn--sm" type="button" id="manage-open" aria-haspopup="dialog" aria-controls="manage">Manage bookings</button>
+          </div>
+          <ul class="bookbook-list" id="bookbook-list"></ul>
+          <p class="bookbook-note">Bookings are kept in this browser only. A live restaurant needs a shared booking database so every guest sees the same tables.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer" id="site-footer">
+    <div class="container footer-inner">
+      <nav class="footer-nav" aria-label="Footer">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="reservation.html">Reservation</a></li>
+        </ul>
+      </nav>
+      <div class="footer-ornament" aria-hidden="true">
+        <svg viewBox="0 0 48 48"><use href="#icon-sprig"></use></svg>
+      </div>
+      <p class="footer-legal">
+        <span class="footer-copy">&copy; <span data-year>2026</span> Luxury Vibes Restaurant &amp; Kitchen. <span class="nw">All rights reserved.</span></span>
+        <span class="footer-legal-links"><a href="terms.html">Terms &amp; Conditions</a><a href="privacy.html">Privacy Policy</a></span>
+      </p>
+    </div>
+  </footer>
+
+  <!-- ============ RESERVATION CARD ============ -->
+  <div class="booking" id="booking" hidden>
+    <div class="booking-backdrop" aria-hidden="true"></div>
+    <div class="booking-stage">
+      <form class="paper" id="paper" role="dialog" aria-modal="true" aria-labelledby="paper-title" aria-describedby="paper-desc" novalidate autocomplete="on">
+        <img class="paper-art" src="assets/images/reservation/reservation-card.webp" alt="" width="1024" height="1536" decoding="async">
+        <h2 class="visually-hidden" id="paper-title">Reservation card</h2>
+        <p class="visually-hidden" id="paper-desc">Your table awaits. Fill in the five fields and confirm.</p>
+        <p class="paper-brand" aria-hidden="true">Luxury Vibes</p>
+        <p class="paper-brand-sub" aria-hidden="true">Restaurant &amp; Kitchen</p>
+
+        <button class="btn btn--icon paper-close" type="button" data-close-paper aria-label="Close the card without booking"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-close"></use></svg></button>
+
+        <fieldset class="paper-fields" id="paper-fields">
+          <legend class="visually-hidden">Reservation details</legend>
+
+          <div class="pf pf--name">
+            <label class="pf-label" for="pf-name">Reserved under</label>
+            <input class="pf-input" id="pf-name" name="name" type="text" autocomplete="name" placeholder="Your full name" maxlength="60" aria-describedby="pf-name-error" required>
+            <p class="pf-error" id="pf-name-error" aria-live="polite"></p>
+          </div>
+
+          <div class="pf pf--table">
+            <label class="pf-label" for="pf-table">Table no.</label>
+            <output class="pf-input pf-static" id="pf-table" name="table" aria-describedby="pf-table-error"></output>
+            <div class="pf-error pf-error--table" id="pf-table-error" aria-live="polite"></div>
+          </div>
+
+          <div class="pf pf--date">
+            <span class="pf-label" id="pf-date-label">Date</span>
+            <button class="pf-input pf-picker" id="pf-date" type="button" aria-labelledby="pf-date-label pf-date" aria-haspopup="dialog" aria-describedby="pf-date-error">
+              <span class="pf-value" data-placeholder="Choose a date"></span>
+              <svg class="pf-chevron" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-chev-right"></use></svg>
+            </button>
+            <p class="pf-error" id="pf-date-error" aria-live="polite"></p>
+          </div>
+
+          <div class="pf pf--time">
+            <span class="pf-label" id="pf-time-label">Time</span>
+            <button class="pf-input pf-picker" id="pf-time" type="button" aria-labelledby="pf-time-label pf-time" aria-haspopup="dialog" aria-describedby="pf-time-error">
+              <span class="pf-value" data-placeholder="Choose start and end time"></span>
+              <svg class="pf-chevron" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-chev-right"></use></svg>
+            </button>
+            <p class="pf-error" id="pf-time-error" aria-live="polite"></p>
+          </div>
+
+          <div class="pf pf--guests">
+            <label class="pf-label" for="pf-guests">No. of members</label>
+            <input class="pf-input" id="pf-guests" name="guests" type="text" inputmode="numeric" pattern="[1-6]" maxlength="1" placeholder="1 to 6" autocomplete="off" aria-describedby="pf-guests-hint pf-guests-error" required>
+            <span class="pf-hint" id="pf-guests-hint"></span>
+            <p class="pf-error" id="pf-guests-error" aria-live="polite"></p>
+          </div>
+        </fieldset>
+
+        <div class="paper-actions">
+          <button class="btn paper-confirm" id="paper-confirm" type="submit">
+            <span data-label>Confirm Your Reservation</span>
+          </button>
+        </div>
+        <div class="paper-sign" id="paper-sign" aria-hidden="true">
+          <svg viewBox="0 0 600 124" preserveAspectRatio="xMidYMid meet">
+            <defs><clipPath id="sign-clip"><rect id="sign-clip-rect" x="150" y="0" width="0" height="124"></rect></clipPath></defs>
+            <g class="sign-mark" transform="translate(38 4) scale(2.3)">
+              <path class="sign-stroke sign-fill" d="M24 26c0-7 2.5-12 0-20-2.5 8 0 13 0 20Z"></path>
+              <path class="sign-stroke" d="M24 44V22"></path>
+              <path class="sign-stroke sign-fill" d="M24 34c-2-7-7-10-13-10 1 6 6 10 13 10Z"></path>
+              <path class="sign-stroke sign-fill" d="M24 34c2-7 7-10 13-10-1 6-6 10-13 10Z"></path>
+              <path class="sign-stroke" d="M23 25c-3-4-7-6-11-6"></path>
+              <path class="sign-stroke" d="M25 25c3-4 7-6 11-6"></path>
+            </g>
+            <g clip-path="url(#sign-clip)">
+              <text class="sign-name" x="160" y="74">Luxury Vibes</text>
+            </g>
+            <text class="sign-sub" id="sign-sub" x="163" y="106"></text>
+          </svg>
+        </div>
+        <p class="paper-thanks" aria-hidden="true">Thank you for choosing us<small>We look forward to serving you</small></p>
+
+        <!-- calendar: covers the paper's writing area -->
+        <section class="paper-panel cal" id="cal" role="dialog" aria-modal="true" aria-labelledby="cal-title" hidden>
+          <header class="panel-head">
+            <p class="panel-eyebrow" id="cal-title">Choose a date</p>
+            <button class="btn btn--icon panel-close" type="button" data-close-panel aria-label="Close the calendar"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-close"></use></svg></button>
+          </header>
+          <div class="cal-nav">
+            <button class="btn btn--icon" type="button" id="cal-prev" aria-label="Previous month"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-chev-left"></use></svg></button>
+            <p class="cal-month" id="cal-month" aria-live="polite"></p>
+            <button class="btn btn--icon" type="button" id="cal-next" aria-label="Next month"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-chev-right"></use></svg></button>
+          </div>
+          <div class="cal-week" aria-hidden="true"><span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span><span>Su</span></div>
+          <div class="cal-viewport"><div class="cal-grid" id="cal-grid" role="grid" aria-labelledby="cal-month"></div></div>
+          <footer class="panel-foot">
+            <p class="panel-picked" id="cal-picked"></p>
+            <button class="btn" type="button" id="cal-use">Use this date</button>
+          </footer>
+        </section>
+
+        <!-- time picker: covers the paper's writing area -->
+        <section class="paper-panel tp" id="tp" role="dialog" aria-modal="true" aria-labelledby="tp-title" hidden>
+          <header class="panel-head">
+            <p class="panel-eyebrow" id="tp-title">Choose a start time</p>
+            <button class="btn btn--icon panel-close" type="button" data-close-panel aria-label="Close the time selector"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-close"></use></svg></button>
+          </header>
+          <div class="tp-steps" role="tablist" aria-label="Booking time">
+            <button type="button" class="tp-step is-active" role="tab" id="tp-step-start" aria-selected="true" data-step="start"><span>1</span>Start time<small id="tp-step-start-val">Not set</small></button>
+            <button type="button" class="tp-step" role="tab" id="tp-step-end" aria-selected="false" data-step="end" disabled><span>2</span>End time<small id="tp-step-end-val">Not set</small></button>
+          </div>
+          <p class="tp-context" id="tp-context"></p>
+          <div class="tp-body" id="tp-body">
+          <div class="tp-ampm" role="radiogroup" aria-label="Morning or evening">
+            <button type="button" class="tp-seg" role="radio" data-ampm="am" aria-checked="false">AM</button>
+            <button type="button" class="tp-seg" role="radio" data-ampm="pm" aria-checked="true">PM</button>
+          </div>
+          <p class="tp-label" id="tp-hours-label">Hour</p>
+          <div class="tp-grid tp-hours" id="tp-hours" role="radiogroup" aria-labelledby="tp-hours-label"></div>
+          <p class="tp-label" id="tp-mins-label">Minutes</p>
+          <div class="tp-grid tp-mins" id="tp-mins" role="radiogroup" aria-labelledby="tp-mins-label"></div>
+          <p class="tp-legend"><span class="tp-key tp-key--booked" aria-hidden="true"></span>Reserved at this table <span class="tp-key tp-key--past" aria-hidden="true"></span>Unavailable</p>
+          </div>
+          <footer class="panel-foot">
+            <p class="panel-picked" id="tp-picked"></p>
+            <div class="panel-actions">
+              <button class="btn btn--sm tp-back" type="button" id="tp-back" hidden>Change start</button>
+              <button class="btn" type="button" id="tp-use" disabled>Next: end time</button>
+            </div>
+          </footer>
+        </section>
+      </form>
+      <img class="pen" id="pen" src="assets/images/reservation/fountain-pen.webp" alt="" width="2246" height="195" decoding="async">
+    </div>
+  </div>
+
+  <!-- ============ MANAGE BOOKINGS ============ -->
+  <div class="manage" id="manage" hidden>
+    <div class="manage-backdrop" data-manage-close aria-hidden="true"></div>
+    <section class="manage-panel" role="dialog" aria-modal="true" aria-labelledby="manage-title" aria-describedby="manage-desc">
+      <header class="manage-head">
+        <h2 id="manage-title">Manage bookings</h2>
+        <button class="btn btn--icon" type="button" data-manage-close aria-label="Close"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-close"></use></svg></button>
+      </header>
+      <p class="manage-desc" id="manage-desc">Tick the bookings you want to remove. Guests already seated at a removed booking get up and leave.</p>
+      <label class="manage-all">
+        <input type="checkbox" id="manage-all">
+        <span class="mcheck" aria-hidden="true"></span>
+        <span>Remove all bookings</span>
+      </label>
+      <ul class="manage-list" id="manage-list"></ul>
+      <footer class="manage-foot">
+        <p class="manage-status" id="manage-status" role="status" aria-live="polite"></p>
+        <div class="manage-actions">
+          <button class="btn btn--sm" type="button" data-manage-close>Cancel</button>
+          <button class="btn" type="button" id="manage-remove" disabled>Remove selected</button>
+        </div>
+      </footer>
+    </section>
+  </div>
+
+  <!-- ============ SEARCH DIALOG ============ -->
+  <dialog class="search-dialog" id="search-dialog" aria-labelledby="search-label">
+    <form class="search-form" method="dialog" role="search">
+      <label class="search-label" id="search-label" for="site-search">Search Luxury Vibes</label>
+      <div class="search-row">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg>
+        <input id="site-search" type="search" placeholder="Try “tikka”, “jalebi” or “hours”" autocomplete="off" aria-controls="search-results">
+        <button class="btn btn--icon search-close" type="button" data-close-search aria-label="Close search">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+      <ul class="search-results" id="search-results" aria-live="polite"></ul>
+    </form>
+  </dialog>
+
+  <!-- ============ ICON SPRITE ============ -->
+  <svg class="sprite" aria-hidden="true" focusable="false">
+    <symbol id="icon-arrow" viewBox="0 0 24 24"><path d="M5 12h13M13 6.5 18.5 12 13 17.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="icon-chev-left" viewBox="0 0 24 24"><path d="M14.5 6 8.5 12l6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="icon-chev-right" viewBox="0 0 24 24"><path d="m9.5 6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="icon-leaf" viewBox="0 0 48 48">
+      <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M9 39C7 25 15 11 40 8c1 20-9 33-26 31"/>
+        <path d="M6 42 33 15"/>
+        <path d="M14 33l-1-8M19 28l-1-9M24 23l0-8M29 19l1-6M18 34l8 0M23 29l9-1M27 24l8-2"/>
+      </g>
+    </symbol>
+    <symbol id="icon-chef" viewBox="0 0 48 48">
+      <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round">
+        <path d="M14 28c-4.5-.6-7.5-4-7.5-8.2a8 8 0 0 1 11-7.4A8.5 8.5 0 0 1 24 9a8.5 8.5 0 0 1 6.5 3.4 8 8 0 0 1 11 7.4c0 4.2-3 7.6-7.5 8.2"/>
+        <path d="M14 26v13h20V26"/>
+        <path d="M14 33h20M20 33v6M28 33v6"/>
+      </g>
+    </symbol>
+    <symbol id="icon-sprig" viewBox="0 0 48 48">
+      <g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
+        <path d="M24 44V22"/>
+        <path d="M24 26c0-7 2.5-12 0-20-2.5 8 0 13 0 20Z" fill="currentColor"/>
+        <path d="M24 34c-2-7-7-10-13-10 1 6 6 10 13 10Z"/>
+        <path d="M24 34c2-7 7-10 13-10-1 6-6 10-13 10Z"/>
+        <path d="M23 25c-3-4-7-6-11-6M25 25c3-4 7-6 11-6"/>
+      </g>
+    </symbol>
+    <symbol id="icon-close" viewBox="0 0 24 24"><path d="M6.5 6.5l11 11M17.5 6.5l-11 11" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  </svg>
+
+  <script src="js/main.js" defer></script>
+  <script src="js/motion.js" defer></script>
+  <script src="js/smoke.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.149.0/build/three.min.js" defer></script>
+  <script src="js/reservation-data.js" defer></script>
+  <script src="js/reservation-scene.js" defer></script>
+  <script src="js/reservation.js" defer></script>
+</body>
+</html>

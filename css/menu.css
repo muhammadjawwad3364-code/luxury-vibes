@@ -1,0 +1,424 @@
+/* =========================================================
+   Luxury Vibes — Menu page: the black-and-gold scroll
+   Geometry is driven by three custom properties on
+   .scroll-stage, set and animated by js/menu.js:
+     --d      roller diameter (px)
+     --rod-w  width of the black roller body (px)
+     --open   how far the bottom roller has travelled (px)
+   Hero styles are shared with the Reservation page (reservation.css).
+   ========================================================= */
+
+.page-menu {
+  --paper-black: #0f0d0b;
+  --ink-soft: #d8c79c;            /* champagne gold for descriptions */
+  --gold-ink: #e8b74e;
+  --gold-ink-light: #d4a24a;
+  /* polished gold leaf: bright highlight, deep amber core, warm return */
+  --gold-foil: linear-gradient(180deg, #fff3c4 0%, #ffd976 22%, #e8b13f 45%, #a8711c 58%, #f2c95e 76%, #fff0b8 100%);
+}
+
+/* shiny gold lettering, used for titles, dish names and prices */
+.gold-foil,
+.sheet-brand, .sheet-title, .dish-name, .dish-price {
+  background: var(--gold-foil);
+  background-size: 100% 1.25em;          /* one band of shine per line of text */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+.sheet-title, .sheet-brand { filter: drop-shadow(0 2px 0 rgba(0, 0, 0, .9)) drop-shadow(0 0 10px rgba(240, 190, 80, .22)); }
+
+/* ---------- section ---------- */
+.scroll-section {
+  position: relative;
+  padding-block: clamp(4rem, 8vw, 6rem) clamp(4rem, 8vw, 6rem);
+  padding-left: var(--gutter);
+  padding-right: var(--gutter-r);
+  background:
+    radial-gradient(ellipse 60% 40% at 50% 18%, #0d3a1f 0%, rgba(13, 58, 31, 0) 70%),
+    radial-gradient(ellipse 90% 60% at 50% 80%, #06281a 0%, rgba(6, 40, 26, 0) 75%),
+    var(--forest-900);
+  overflow: hidden;   /* nothing may ever cause sideways scrolling */
+}
+
+.scroll-stage {
+  --d: 88px;
+  --rod-w: 520px;
+  --open: 0px;
+  --cap-w: calc(var(--d) * 1.4553);   /* end cap image is 342 x 297 for a 235 px body */
+  --cap-h: calc(var(--d) * 1.2638);
+  position: relative;
+  left: 50%;
+  translate: -50% 0;
+  width: calc(var(--rod-w) + var(--cap-w) * 2);
+  margin: 0;
+  padding-bottom: calc(var(--d) * 0.6);
+}
+
+/* ---------- rollers ---------- */
+.roller {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--d);
+  pointer-events: none;
+}
+.roller--top { z-index: 4; }
+.roller--bottom {
+  position: absolute;
+  left: 0; right: 0; top: 0;
+  z-index: 3;
+  transform: translate3d(0, var(--open), 0);
+  will-change: transform;
+}
+
+.rod {
+  position: relative;
+  flex: none;
+  width: var(--rod-w);
+  height: var(--d);
+  margin-inline: calc(var(--d) * -0.03);
+  background:
+    /* cylinder lighting: rim light, specular band, core shadow, bounce */
+    linear-gradient(180deg,
+      rgba(255, 236, 200, .10) 0%,
+      rgba(255, 255, 255, .06) 9%,
+      rgba(255, 244, 220, .22) 21%,
+      rgba(255, 255, 255, .03) 33%,
+      rgba(0, 0, 0, 0) 48%,
+      rgba(0, 0, 0, .38) 76%,
+      rgba(0, 0, 0, .62) 92%,
+      rgba(70, 52, 30, .35) 100%),
+    url("../assets/images/menu/leather.webp") 0 var(--spin, 0px) / calc(var(--d) * 2) calc(var(--d) * 2) repeat;
+  background-color: #16130f;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 230, 190, .12),
+    inset 0 -2px 3px rgba(0, 0, 0, .55);
+}
+.roller--bottom .rod { --spin: var(--roll, 0px); }
+
+.rod-label {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: calc(var(--d) * 0.32);
+  font: 600 calc(var(--d) * 0.5)/1 var(--font-display);
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  /* engraved gold leaf */
+  background: linear-gradient(180deg, #fff1bf 0%, #f2c768 32%, #b9852c 58%, #e9be62 78%, #8a5d18 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 1px 0 rgba(0, 0, 0, .8)) drop-shadow(0 0 6px rgba(239, 195, 106, .18));
+}
+.rod-label i {
+  position: relative;
+  display: block;
+  width: calc(var(--d) * 1.6);
+  height: 1.5px;
+  background: linear-gradient(90deg, transparent, #d9a84a 20%, #f0c565 50%, #d9a84a 80%, transparent);
+}
+.rod-label i::after {
+  content: "";
+  position: absolute;
+  left: 50%; top: 50%;
+  width: calc(var(--d) * 0.1);
+  height: calc(var(--d) * 0.1);
+  background: #e7b85a;
+  transform: translate(-50%, -50%) rotate(45deg);
+  box-shadow: 0 0 4px rgba(239, 195, 106, .5);
+}
+
+/* ---------- gold end caps ---------- */
+.cap {
+  position: relative;
+  flex: none;
+  width: var(--cap-w);
+  height: var(--cap-h);
+  z-index: 2;
+  filter: drop-shadow(0 calc(var(--d) * 0.12) calc(var(--d) * 0.12) rgba(0, 0, 0, .55));
+}
+.cap img { display: block; width: 100%; height: 100%; max-width: none; }
+/* the engraved floral band: a seamless strip that slides when the roller turns */
+.cap-band {
+  position: absolute;
+  top: 12.6%;
+  height: 77.4%;
+  width: 15.6%;
+  background: url("../assets/images/menu/cap-band.webp") 0 var(--spin, 0px) / 100% calc(var(--d) * 1.98) repeat-y;
+  -webkit-mask-image: linear-gradient(180deg, transparent 0, #000 9%, #000 91%, transparent 100%);
+  mask-image: linear-gradient(180deg, transparent 0, #000 9%, #000 91%, transparent 100%);
+  opacity: 0;
+}
+.cap-band::after {
+  content: "";
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, .35), rgba(255, 240, 200, .12) 28%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, .45));
+}
+.cap--l .cap-band { left: 75.2%; }
+.cap--r .cap-band { left: 9.1%; }
+.roller--bottom .cap-band { --spin: var(--roll, 0px); opacity: 1; }
+/* a slow glint that travels across the polished gold */
+.cap-shine {
+  position: absolute;
+  inset: 8% 0;
+  pointer-events: none;
+  background: linear-gradient(105deg, transparent 35%, rgba(255, 246, 214, .55) 48%, transparent 60%) no-repeat;
+  background-size: 260% 100%;
+  background-position: 130% 0;
+  -webkit-mask: url("../assets/images/menu/cap-left.webp") center / 100% 100%;
+  mask: url("../assets/images/menu/cap-left.webp") center / 100% 100%;
+  mix-blend-mode: soft-light;
+  animation: capGlint 7s ease-in-out infinite;
+}
+.cap--r .cap-shine {
+  -webkit-mask-image: url("../assets/images/menu/cap-right.webp");
+  mask-image: url("../assets/images/menu/cap-right.webp");
+  animation-delay: 1.2s;
+}
+@keyframes capGlint {
+  0%, 62% { background-position: 130% 0; }
+  86%, 100% { background-position: -30% 0; }
+}
+
+/* soft contact shadow under the whole scroll */
+.scroll-floor {
+  position: absolute;
+  left: 50%;
+  top: calc(var(--d) * 1.05 + var(--open));
+  width: calc(var(--rod-w) + var(--cap-w) * 1.4);
+  height: calc(var(--d) * 0.5);
+  transform: translateX(-50%);
+  background: radial-gradient(closest-side, rgba(0, 0, 0, .55), rgba(0, 0, 0, .25) 55%, rgba(0, 0, 0, 0));
+  filter: blur(calc(var(--d) * 0.06));
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* ---------- the black sheet ---------- */
+.sheet-wrap {
+  position: relative;
+  z-index: 2;
+  width: calc(var(--rod-w) - var(--d) * 0.16);
+  margin: calc(var(--d) * -0.5) auto 0;
+  height: var(--open);
+  overflow: hidden;
+  visibility: hidden;
+  perspective: 1600px;
+  perspective-origin: 50% 0;
+}
+.scroll-stage:not([data-state="closed"]) .sheet-wrap { visibility: visible; }
+
+.sheet {
+  position: relative;
+  padding: calc(var(--d) * 0.85) clamp(22px, 5vw, 76px) clamp(48px, 6vw, 80px);
+  color: var(--ink-soft);
+  background:
+    /* a soft warm glow in the middle, deeper black toward the edges */
+    radial-gradient(ellipse 110% 75% at 50% 42%, rgba(70, 52, 24, .28) 0%, rgba(70, 52, 24, 0) 62%),
+    linear-gradient(90deg, rgba(0, 0, 0, .55), rgba(0, 0, 0, 0) 4%, rgba(0, 0, 0, 0) 96%, rgba(0, 0, 0, .55)),
+    url("../assets/images/menu/paper-black.webp") 0 0 / 512px 512px repeat;
+  background-color: var(--paper-black);
+  transform-origin: 50% 0;
+  transform: rotateX(var(--tilt, 0deg)) skewY(var(--skew, 0deg));
+  will-change: transform;
+  /* softly irregular, deckled side edges (set by js/menu.js) */
+  clip-path: var(--deckle, none);
+}
+/* two faint folds across the sheet */
+.sheet::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, transparent calc(33.3% - 14px), rgba(0, 0, 0, .35) calc(33.3% - 2px), rgba(255, 226, 160, .09) 33.3%, rgba(0, 0, 0, .25) calc(33.3% + 3px), transparent calc(33.3% + 16px)),
+    linear-gradient(180deg, transparent calc(66.6% - 14px), rgba(0, 0, 0, .32) calc(66.6% - 2px), rgba(255, 226, 160, .08) 66.6%, rgba(0, 0, 0, .22) calc(66.6% + 3px), transparent calc(66.6% + 16px));
+}
+/* a fine double gold border inset from the edges */
+.sheet::after {
+  content: "";
+  position: absolute;
+  inset: calc(var(--d) * 0.42) clamp(10px, 1.6vw, 22px) clamp(16px, 2vw, 26px);
+  border: 1px solid rgba(214, 164, 72, .55);
+  outline: 1px solid rgba(214, 164, 72, .22);
+  outline-offset: 4px;
+  pointer-events: none;
+}
+
+/* moving light ripples while the paper is in motion (opacity set from its speed) */
+.sheet-ripple {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: var(--ripple, 0);
+  background: repeating-linear-gradient(180deg,
+    rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, .35) 34px, rgba(255, 214, 130, .10) 58px, rgba(0, 0, 0, 0) 92px);
+  background-position: 0 var(--ripple-y, 0px);
+}
+/* the paper darkens where it curves around each roller */
+.sheet-shade {
+  position: absolute;
+  left: 0; right: 0;
+  height: calc(var(--d) * 0.7);
+  pointer-events: none;
+}
+.sheet-shade--top { top: 0; background: linear-gradient(180deg, rgba(0, 0, 0, .8), rgba(0, 0, 0, .3) 45%, rgba(0, 0, 0, 0)); }
+.sheet-shade--bottom { bottom: 0; background: linear-gradient(0deg, rgba(0, 0, 0, .85), rgba(255, 220, 150, .07) 38%, rgba(0, 0, 0, .15) 62%, rgba(0, 0, 0, 0)); }
+
+/* ---------- menu typography ---------- */
+.sheet-head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: clamp(28px, 4vw, 46px);
+}
+.sheet-crest { width: 46px; height: 46px; color: var(--gold-ink); }
+.sheet-brand {
+  margin-top: .5rem;
+  font: 500 .78rem/1.3 var(--font-display);
+  letter-spacing: .32em;
+  text-transform: uppercase;
+}
+.sheet-title {
+  margin-top: .35rem;
+  font: 600 clamp(2.4rem, 5vw, 3.6rem)/1 var(--font-display);
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  padding-bottom: .06em;
+  background-image: linear-gradient(100deg, rgba(255, 255, 255, 0) 40%, rgba(255, 252, 230, .95) 50%, rgba(255, 255, 255, 0) 60%), var(--gold-foil);
+  background-size: 250% 100%, 100% 1.06em;
+  background-repeat: no-repeat, repeat;
+  background-position: 160% 0, 0 0;
+  animation: gold-glint 6.5s ease-in-out 1.5s infinite;
+}
+@keyframes gold-glint {
+  0%, 60% { background-position: 160% 0, 0 0; }
+  85%, 100% { background-position: -60% 0, 0 0; }
+}
+.sheet-sub {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: .8rem;
+  font: italic 500 1.08rem/1.3 var(--font-serif);
+  color: var(--ink-soft);
+}
+.sheet-sub::before, .sheet-sub::after {
+  content: "";
+  width: clamp(40px, 9vw, 120px);
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold-ink-light));
+}
+.sheet-sub::after { transform: scaleX(-1); }
+
+.dishes {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  column-gap: clamp(36px, 7vw, 120px);
+}
+.dish-col { list-style: none; margin: 0; padding: 0; display: grid; row-gap: clamp(16px, 1.9vw, 26px); }
+.dish {
+  display: grid;
+  grid-template-columns: clamp(84px, 8.4vw, 116px) minmax(0, 1fr);
+  column-gap: clamp(14px, 1.6vw, 22px);
+  align-items: start;
+}
+.dish-photo {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 2px;
+  box-shadow: 0 0 0 1px rgba(214, 164, 72, .55), 0 0 0 3px rgba(0, 0, 0, .9), 0 0 0 4px rgba(214, 164, 72, .25), 0 8px 16px -6px rgba(0, 0, 0, .9);
+  background: #1a1510;
+}
+.dish-text { min-width: 0; }
+.dish-name {
+  margin: 0;
+  font: 600 clamp(.82rem, 1vw, .95rem)/1.25 var(--font-display);
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+/* thin gold rule with a small diamond, under the name */
+.dish-rule {
+  position: relative;
+  display: block;
+  height: 1px;
+  margin: .45rem 0 .5rem;
+  background: linear-gradient(90deg, var(--gold-ink-light), rgba(196, 149, 63, .65) 70%, rgba(196, 149, 63, 0));
+}
+.dish-rule::after {
+  content: "";
+  position: absolute;
+  left: 34%; top: 50%;
+  width: 5px; height: 5px;
+  background: var(--gold-ink-light);
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.dish-desc {
+  font: 500 clamp(.98rem, 1.15vw, 1.06rem)/1.4 var(--font-serif);
+  color: var(--ink-soft);
+  max-width: 34em;
+}
+.dish-price {
+  display: inline-block;
+  margin-top: .3rem;
+  font: 600 clamp(1.05rem, 1.3vw, 1.2rem)/1 var(--font-display);
+  letter-spacing: .04em;
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
+.sheet-foot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .9rem;
+  margin-top: clamp(30px, 4vw, 48px);
+  text-align: center;
+  font: italic 500 .98rem/1.4 var(--font-serif);
+  color: var(--ink-soft);
+}
+.sheet-rule {
+  width: min(320px, 60%);
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold-ink-light), transparent);
+}
+
+/* ---------- controls ---------- */
+.scroll-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .8rem;
+  margin-top: clamp(1.4rem, 3vw, 2.2rem);
+}
+.scroll-toggle { min-width: 12.5rem; }
+.scroll-toggle[aria-busy="true"] { cursor: progress; }
+.scroll-mute[aria-pressed="true"] { opacity: .8; }
+
+/* ---------- responsive ---------- */
+@media (max-width: 860px) {
+  .dishes { grid-template-columns: minmax(0, 1fr); row-gap: clamp(16px, 1.9vw, 26px); }
+}
+@media (max-width: 520px) {
+  .rod-label i { width: calc(var(--d) * 0.7); }
+  .dish { grid-template-columns: 76px minmax(0, 1fr); column-gap: 12px; }
+  .sheet { padding-left: 16px; padding-right: 14px; }
+  .dish-name { letter-spacing: .1em; }
+}
+@media (max-width: 420px) {
+  .sheet-sub::before, .sheet-sub::after { display: none; }
+  .sheet-brand { letter-spacing: .2em; }
+  .dish { grid-template-columns: 64px minmax(0, 1fr); column-gap: 10px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cap-shine, .sheet-title { animation: none; }
+}

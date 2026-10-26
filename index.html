@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Luxury Vibes Restaurant</title>
+  <meta name="description" content="Luxury Vibes Restaurant & Kitchen: authentic Indian cuisine crafted with premium spices and seasonal ingredients.">
+  <meta name="theme-color" content="#03170b">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Crimson+Pro:ital,wght@0,500;0,600;1,500&family=Source+Sans+3:wght@400;600&display=swap">
+  <link rel="preload" as="image" href="assets/images/hero-feast-mobile.webp" media="(max-width: 56.24em)" fetchpriority="high">
+  <link rel="preload" as="image" href="assets/images/hero-feast.webp" media="(min-width: 56.25em)" fetchpriority="high">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <div class="nav-scrim" data-nav-close aria-hidden="true"></div>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <div class="drawer-head">
+          <button class="drawer-close" type="button" data-nav-close aria-label="Close menu">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+          </button>
+          <a class="drawer-brand" href="#home" aria-label="Luxury Vibes Restaurant and Kitchen, home">
+            <svg viewBox="0 0 48 48" aria-hidden="true"><use href="#icon-sprig"></use></svg>
+            <span class="drawer-brand-name">Luxury Vibes</span>
+            <span class="drawer-brand-sub">Restaurant &amp; Kitchen</span>
+          </a>
+        </div>
+        <ul class="nav-list nav-list--left">
+          <li><a class="nav-link is-active" href="#home" data-spy="home" aria-current="true">Home</a></li>
+          <li><a class="nav-link" href="menu.html">Menu</a></li>
+          <li><a class="nav-link" href="about.html">About</a></li>
+          <li><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li><a class="nav-link" href="reservation.html">Reservation</a></li>
+        </ul>
+        <ul class="nav-list nav-list--right">
+          <li class="nav-action">
+            <button class="icon-action" type="button" data-open-search aria-label="Search the site" aria-haspopup="dialog">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg>
+            </button>
+          </li>
+          <li class="nav-action">
+            <a class="icon-action icon-action--bag" href="menu.html" aria-label="Browse the menu">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path class="fill" d="M5 8.5h14l-1 12.5H6L5 8.5Z"/><path d="M9 10V7a3 3 0 0 1 6 0v3"/></svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <a class="logo" href="#home" aria-label="Luxury Vibes Restaurant and Kitchen, back to top" data-no-roll>
+        <span class="logo-orb" aria-hidden="true"><span class="logo-swirl"></span><span class="logo-swirl logo-swirl--slow"></span><span class="logo-core"></span></span>
+        <svg class="logo-mark" viewBox="0 0 48 48" aria-hidden="true"><use href="#icon-sprig"></use></svg>
+        <span class="logo-name">Luxury Vibes</span>
+        <span class="logo-sub">Restaurant &amp; Kitchen</span>
+      </a>
+
+      <div class="header-actions header-actions--mobile">
+        <button class="icon-action" type="button" data-open-search aria-label="Search the site" aria-haspopup="dialog">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg>
+        </button>
+        <a class="icon-action icon-action--bag" href="menu.html" aria-label="Browse the menu">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path class="fill" d="M5 8.5h14l-1 12.5H6L5 8.5Z"/><path d="M9 10V7a3 3 0 0 1 6 0v3"/></svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="hero-media" aria-hidden="true">
+        <picture>
+          <source media="(max-width: 56.24em)" srcset="assets/images/hero-feast-mobile.webp" width="1015" height="821">
+          <img class="hero-img" src="assets/images/hero-feast.webp" alt="" width="1915" height="821" fetchpriority="high" decoding="async">
+        </picture>
+      </div>
+      <div class="container hero-content">
+        <h1 class="hero-title" id="hero-title">
+          <span class="hero-line">Bold flavors</span>
+          <span class="hero-line">Timeless Table</span>
+        </h1>
+        <p class="hero-text">Authentic Indian cuisine, crafted with premium spices and seasonal ingredients.</p>
+        <a class="btn hero-cta" href="menu.html">
+          <span>Explore our menu</span>
+          <svg class="btn-arrow" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-arrow"></use></svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- ============ OUR SIGNATURE ============ -->
+    <section class="signature" id="signature" aria-labelledby="signature-title">
+      <div class="container">
+        <h2 class="ornate-title" id="signature-title" data-reveal>Our Signature</h2>
+        <div class="signature-grid">
+          <article class="sig-card" data-reveal style="--d:0">
+            <svg class="sig-icon" viewBox="0 0 48 48" aria-hidden="true"><use href="#icon-leaf"></use></svg>
+            <h3>Fresh Ingredients</h3>
+            <p>Locally sourced, farm-fresh producer for authentic taste.</p>
+          </article>
+          <figure class="sig-photo" data-reveal style="--d:1">
+            <img src="assets/images/signature-kadai.webp" alt="Vegetable curry in a copper-handled kadai, garnished with fresh coriander" width="537" height="510" loading="lazy" decoding="async">
+          </figure>
+          <article class="sig-card" data-reveal style="--d:2">
+            <svg class="sig-icon" viewBox="0 0 48 48" aria-hidden="true"><use href="#icon-chef"></use></svg>
+            <h3>Crafted with Care</h3>
+            <p>Traditional techniques, modern standards.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ A TASTE OF TRADITION ============ -->
+    <section class="tradition" id="about" aria-labelledby="tradition-title">
+      <div class="container tradition-grid">
+        <figure class="framed-photo tradition-photo" data-reveal>
+          <img src="assets/images/tradition-biryani.webp" alt="Vegetable biryani in a copper handi, with chutneys and whole spices on a wooden table" width="715" height="558" loading="lazy" decoding="async">
+        </figure>
+        <div class="tradition-copy" data-reveal style="--d:1">
+          <h2 class="section-title" id="tradition-title">A Taste of Tradition</h2>
+          <p>Our menu draws inspiration from regional Indian kitchens, bringing together time-honored recipes and authentic flavors in every dish.</p>
+          <p class="story-more-text">Every recipe begins with whole spices, fresh herbs and patient cooking. We keep the methods of regional home kitchens and serve them with the care of a fine dining room.</p>
+          <a class="btn story-link" href="about.html#story">
+            <span>Explore our story</span>
+            <svg class="btn-arrow" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-arrow"></use></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ A CELEBRATION OF SPICE (menu) ============ -->
+    <section class="spice" id="menu" aria-labelledby="spice-title">
+      <div class="container spice-grid">
+        <div class="spice-copy" data-reveal>
+          <h2 class="section-title" id="spice-title">A Celebration of Spice</h2>
+          <p class="spice-intro">Balanced spices, fresh herbs and slow cooking create dishes full of depth, flavor and soul.</p>
+
+          <div class="menu-tabs" role="tablist" aria-label="Menu categories" aria-orientation="vertical">
+            <button class="menu-tab is-active" type="button" role="tab" id="tab-curries" aria-controls="panel-curries" aria-selected="true" data-tab="curries">
+              <span class="menu-tab-thumb"><img src="assets/images/thumb-curries.webp" alt="" width="183" height="138" loading="lazy" decoding="async"></span>
+              <span class="menu-tab-text">
+                <span class="menu-tab-title">Signature Curries</span>
+                <span class="menu-tab-desc">Rich, aromatic and unforgettable.</span>
+              </span>
+            </button>
+            <button class="menu-tab" type="button" role="tab" id="tab-tandoor" aria-controls="panel-tandoor" aria-selected="false" tabindex="-1" data-tab="tandoor">
+              <span class="menu-tab-thumb"><img src="assets/images/thumb-tandoor.webp" alt="" width="183" height="141" loading="lazy" decoding="async"></span>
+              <span class="menu-tab-text">
+                <span class="menu-tab-title">Tandoor Specialties</span>
+                <span class="menu-tab-desc">Smoky, tender and full of flavor.</span>
+              </span>
+            </button>
+            <button class="menu-tab" type="button" role="tab" id="tab-desserts" aria-controls="panel-desserts" aria-selected="false" tabindex="-1" data-tab="desserts">
+              <span class="menu-tab-thumb"><img src="assets/images/thumb-desserts.webp" alt="" width="183" height="138" loading="lazy" decoding="async"></span>
+              <span class="menu-tab-text">
+                <span class="menu-tab-title">Traditional Desserts</span>
+                <span class="menu-tab-desc">The perfect sweet ending.</span>
+              </span>
+            </button>
+          </div>
+        </div>
+
+        <div class="menu-panels" data-reveal style="--d:1">
+          <!-- Signature Curries -->
+          <div class="menu-panel is-active" role="tabpanel" id="panel-curries" aria-labelledby="tab-curries" data-panel="curries">
+            <div class="slider" data-slider aria-roledescription="carousel" aria-label="Signature Curries">
+              <div class="slider-frame">
+                <figure class="slide is-active" aria-roledescription="slide" aria-label="1 of 3">
+                  <img src="assets/images/slider/curry-house-kadai.webp" alt="House kadai curry in a copper-handled pot with coriander and peppercorns" width="540" height="540" loading="lazy" decoding="async">
+                  <figcaption>House Kadai Curry</figcaption>
+                </figure>
+                <figure class="slide" aria-roledescription="slide" aria-label="2 of 3">
+                  <img src="assets/images/slider/curry-chicken-karahi.webp" alt="Chicken karahi in a black bowl with naan on a dark board" width="800" height="800" loading="lazy" decoding="async">
+                  <figcaption>Chicken Karahi</figcaption>
+                </figure>
+                <figure class="slide" aria-roledescription="slide" aria-label="3 of 3">
+                  <img src="assets/images/slider/curry-butter-chicken-dal.webp" alt="Butter chicken and dal makhani in copper bowls with rice and naan" width="800" height="800" loading="lazy" decoding="async">
+                  <figcaption>Butter Chicken &amp; Dal Makhani</figcaption>
+                </figure>
+              </div>
+              <div class="slider-caption" aria-live="polite"><span data-caption>House Kadai Curry</span></div>
+              <div class="slider-controls">
+                <button class="btn btn--icon" type="button" data-prev aria-label="Previous dish">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-chev-left"></use></svg>
+                </button>
+                <div class="slider-dots" role="group" aria-label="Choose a dish"></div>
+                <button class="btn btn--icon" type="button" data-next aria-label="Next dish">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-chev-right"></use></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tandoor Specialties -->
+          <div class="menu-panel" role="tabpanel" id="panel-tandoor" aria-labelledby="tab-tandoor" data-panel="tandoor" inert>
+            <div class="slider" data-slider aria-roledescription="carousel" aria-label="Tandoor Specialties">
+              <div class="slider-frame">
+                <figure class="slide is-active" aria-roledescription="slide" aria-label="1 of 3">
+                  <img src="assets/images/slider/tandoor-malai-tikka.webp" alt="Chicken malai tikka skewers with mint cream on a black plate" width="800" height="800" loading="lazy" decoding="async">
+                  <figcaption>Chicken Malai Tikka</figcaption>
+                </figure>
+                <figure class="slide" aria-roledescription="slide" aria-label="2 of 3">
+                  <img src="assets/images/slider/tandoor-paneer-tikka.webp" alt="Paneer tikka skewer with peppers and tomato on a wooden board" width="800" height="800" loading="lazy" decoding="async">
+                  <figcaption>Paneer Tikka</figcaption>
+                </figure>
+                <figure class="slide" aria-roledescription="slide" aria-label="3 of 3">
+                  <img src="assets/images/slider/tandoor-seekh-platter.webp" alt="Tandoori chicken tikka, malai and hariyali kebabs on a grill" width="800" height="800" loading="lazy" decoding="async">
+                  <figcaption>Tandoori Kebab Platter</figcaption>
+                </figure>
+              </div>
+              <div class="slider-caption" aria-live="polite"><span data-caption>Chicken Malai Tikka</span></div>
+              <div class="slider-controls">
+                <button class="btn btn--icon" type="button" data-prev aria-label="Previous dish">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-chev-left"></use></svg>
+                </button>
+                <div class="slider-dots" role="group" aria-label="Choose a dish"></div>
+                <button class="btn btn--icon" type="button" data-next aria-label="Next dish">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-chev-right"></use></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Traditional Desserts -->
+          <div class="menu-panel" role="tabpanel" id="panel-desserts" aria-labelledby="tab-desserts" data-panel="desserts" inert>
+            <div class="slider" data-slider aria-roledescription="carousel" aria-label="Traditional Desserts">
+              <div class="slider-frame">
+                <figure class="slide is-active" aria-roledescription="slide" aria-label="1 of 3">
+                  <img src="assets/images/slider/dessert-gulab-jamun.webp" alt="Gulab jamun with sliced pistachios on a dark plate" width="640" height="640" loading="lazy" decoding="async">
+                  <figcaption>Gulab Jamun</figcaption>
+                </figure>
+                <figure class="slide" aria-roledescription="slide" aria-label="2 of 3">
+                  <img src="assets/images/slider/dessert-jalebi.webp" alt="Saffron jalebi topped with slivered almonds" width="800" height="800" loading="lazy" decoding="async">
+                  <figcaption>Saffron Jalebi</figcaption>
+                </figure>
+                <figure class="slide" aria-roledescription="slide" aria-label="3 of 3">
+                  <img src="assets/images/slider/dessert-street-jalebi.webp" alt="Crisp golden jalebi served in a leaf bowl" width="800" height="800" loading="lazy" decoding="async">
+                  <figcaption>Street-style Jalebi</figcaption>
+                </figure>
+              </div>
+              <div class="slider-caption" aria-live="polite"><span data-caption>Gulab Jamun</span></div>
+              <div class="slider-controls">
+                <button class="btn btn--icon" type="button" data-prev aria-label="Previous dish">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-chev-left"></use></svg>
+                </button>
+                <div class="slider-dots" role="group" aria-label="Choose a dish"></div>
+                <button class="btn btn--icon" type="button" data-next aria-label="Next dish">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-chev-right"></use></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FROM OUR TABLE (scroll-pinned plate animation) ============ -->
+    <section class="feast" id="feast" aria-labelledby="feast-title" aria-describedby="feast-desc">
+      <h2 class="visually-hidden" id="feast-title">From Our Table</h2>
+      <p class="visually-hidden" id="feast-desc">Two plated dishes: spaghetti with cherry tomato, parmesan and parsley, and roasted vegetables with seared meat on a creamy purée, set with a silver fork, fresh mint, parsley, chili and peppercorns.</p>
+      <div class="feast-stage" aria-hidden="true">
+        <div class="feast-piece feast-plate feast-piece--plate-spaghetti" data-plate data-dir="-1">
+          <div class="plate-shadow"></div>
+          <div class="plate-contact"></div>
+          <div class="feast-body">
+            <img src="assets/images/table/plate-spaghetti.webp" alt="" width="948" height="961" loading="lazy" decoding="async">
+          </div>
+        </div>
+        <div class="feast-piece feast-plate feast-piece--plate-puree" data-plate data-dir="1">
+          <div class="plate-shadow"></div>
+          <div class="plate-contact"></div>
+          <div class="feast-body">
+            <img src="assets/images/table/plate-puree.webp" alt="" width="982" height="1007" loading="lazy" decoding="async">
+          </div>
+        </div>
+        <div class="feast-piece feast-deco feast-piece--fork" data-deco data-spin="-70">
+          <img class="deco-shadow" src="assets/images/table/fork.webp" alt="" width="128" height="945" loading="lazy" decoding="async">
+          <div class="feast-body"><img src="assets/images/table/fork.webp" alt="" width="128" height="945" loading="lazy" decoding="async"></div>
+        </div>
+        <div class="feast-piece feast-deco feast-piece--mint-sprig" data-deco data-spin="-130">
+          <img class="deco-shadow" src="assets/images/table/mint-sprig.webp" alt="" width="223" height="252" loading="lazy" decoding="async">
+          <div class="feast-body"><img src="assets/images/table/mint-sprig.webp" alt="" width="223" height="252" loading="lazy" decoding="async"></div>
+        </div>
+        <div class="feast-piece feast-deco feast-piece--parsley-sprig" data-deco data-spin="150">
+          <img class="deco-shadow" src="assets/images/table/parsley-sprig.webp" alt="" width="428" height="402" loading="lazy" decoding="async">
+          <div class="feast-body"><img src="assets/images/table/parsley-sprig.webp" alt="" width="428" height="402" loading="lazy" decoding="async"></div>
+        </div>
+        <div class="feast-piece feast-deco feast-piece--mint-leaf" data-deco data-spin="-160">
+          <img class="deco-shadow" src="assets/images/table/mint-leaf.webp" alt="" width="110" height="119" loading="lazy" decoding="async">
+          <div class="feast-body"><img src="assets/images/table/mint-leaf.webp" alt="" width="110" height="119" loading="lazy" decoding="async"></div>
+        </div>
+        <div class="feast-piece feast-deco feast-piece--chili-1" data-deco data-spin="220">
+          <img class="deco-shadow" src="assets/images/table/chili-1.webp" alt="" width="37" height="64" loading="lazy" decoding="async">
+          <div class="feast-body"><img src="assets/images/table/chili-1.webp" alt="" width="37" height="64" loading="lazy" decoding="async"></div>
+        </div>
+        <div class="feast-piece feast-deco feast-piece--mint-leaf-small" data-deco data-spin="190">
+          <img class="deco-shadow" src="assets/images/table/mint-leaf-small.webp" alt="" width="99" height="70" loading="lazy" decoding="async">
+          <div class="feast-body"><img src="assets/images/table/mint-leaf-small.webp" alt="" width="99" height="70" loading="lazy" decoding="async"></div>
+        </div>
+        <div class="feast-piece feast-deco feast-piece--peppercorn-1" data-deco data-spin="180">
+          <img class="deco-shadow" src="assets/images/table/peppercorn-1.webp" alt="" width="22" height="24" loading="lazy" decoding="async">
+          <div class="feast-body"><img src="assets/images/table/peppercorn-1.webp" alt="" width="22" height="24" loading="lazy" decoding="async"></div>
+        </div>
+        <div class="feast-piece feast-deco feast-piece--chili-2" data-deco data-spin="-240">
+          <img class="deco-shadow" src="assets/images/table/chili-2.webp" alt="" width="34" height="54" loading="lazy" decoding="async">
+          <div class="feast-body"><img src="assets/images/table/chili-2.webp" alt="" width="34" height="54" loading="lazy" decoding="async"></div>
+        </div>
+        <div class="feast-piece feast-deco feast-piece--parsley-bit" data-deco data-spin="-170">
+          <img class="deco-shadow" src="assets/images/table/parsley-bit.webp" alt="" width="39" height="45" loading="lazy" decoding="async">
+          <div class="feast-body"><img src="assets/images/table/parsley-bit.webp" alt="" width="39" height="45" loading="lazy" decoding="async"></div>
+        </div>
+        <div class="feast-piece feast-deco feast-piece--green-pepper-1" data-deco data-spin="240">
+          <img class="deco-shadow" src="assets/images/table/green-pepper-1.webp" alt="" width="14" height="16" loading="lazy" decoding="async">
+          <div class="feast-body"><img src="assets/images/table/green-pepper-1.webp" alt="" width="14" height="16" loading="lazy" decoding="async"></div>
+        </div>
+        <div class="feast-piece feast-deco feast-piece--peppercorn-2" data-deco data-spin="-200">
+          <img class="deco-shadow" src="assets/images/table/peppercorn-2.webp" alt="" width="23" height="24" loading="lazy" decoding="async">
+          <div class="feast-body"><img src="assets/images/table/peppercorn-2.webp" alt="" width="23" height="24" loading="lazy" decoding="async"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer" id="site-footer">
+    <div class="container footer-inner">
+      <nav class="footer-nav" aria-label="Footer">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="reservation.html">Reservation</a></li>
+        </ul>
+      </nav>
+      <div class="footer-ornament" aria-hidden="true">
+        <svg viewBox="0 0 48 48"><use href="#icon-sprig"></use></svg>
+      </div>
+      <p class="footer-legal">
+        <span class="footer-copy">&copy; <span data-year>2026</span> Luxury Vibes Restaurant &amp; Kitchen. <span class="nw">All rights reserved.</span></span>
+        <span class="footer-legal-links"><a href="terms.html">Terms &amp; Conditions</a><a href="privacy.html">Privacy Policy</a></span>
+      </p>
+    </div>
+  </footer>
+
+  <!-- ============ SEARCH DIALOG ============ -->
+  <dialog class="search-dialog" id="search-dialog" aria-labelledby="search-label">
+    <form class="search-form" method="dialog" role="search">
+      <label class="search-label" id="search-label" for="site-search">Search Luxury Vibes</label>
+      <div class="search-row">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg>
+        <input id="site-search" type="search" placeholder="Try “tikka”, “jalebi” or “hours”" autocomplete="off" aria-controls="search-results">
+        <button class="btn btn--icon search-close" type="button" data-close-search aria-label="Close search">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+      <ul class="search-results" id="search-results" aria-live="polite"></ul>
+    </form>
+  </dialog>
+
+  <!-- ============ ICON SPRITE ============ -->
+  <svg class="sprite" aria-hidden="true" focusable="false">
+    <symbol id="icon-arrow" viewBox="0 0 24 24"><path d="M5 12h13M13 6.5 18.5 12 13 17.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="icon-chev-left" viewBox="0 0 24 24"><path d="M14.5 6 8.5 12l6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="icon-chev-right" viewBox="0 0 24 24"><path d="m9.5 6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="icon-leaf" viewBox="0 0 48 48">
+      <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M9 39C7 25 15 11 40 8c1 20-9 33-26 31"/>
+        <path d="M6 42 33 15"/>
+        <path d="M14 33l-1-8M19 28l-1-9M24 23l0-8M29 19l1-6M18 34l8 0M23 29l9-1M27 24l8-2"/>
+      </g>
+    </symbol>
+    <symbol id="icon-chef" viewBox="0 0 48 48">
+      <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round">
+        <path d="M14 28c-4.5-.6-7.5-4-7.5-8.2a8 8 0 0 1 11-7.4A8.5 8.5 0 0 1 24 9a8.5 8.5 0 0 1 6.5 3.4 8 8 0 0 1 11 7.4c0 4.2-3 7.6-7.5 8.2"/>
+        <path d="M14 26v13h20V26"/>
+        <path d="M14 33h20M20 33v6M28 33v6"/>
+      </g>
+    </symbol>
+    <symbol id="icon-sprig" viewBox="0 0 48 48">
+      <g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
+        <path d="M24 44V22"/>
+        <path d="M24 26c0-7 2.5-12 0-20-2.5 8 0 13 0 20Z" fill="currentColor"/>
+        <path d="M24 34c-2-7-7-10-13-10 1 6 6 10 13 10Z"/>
+        <path d="M24 34c2-7 7-10 13-10-1 6-6 10-13 10Z"/>
+        <path d="M23 25c-3-4-7-6-11-6M25 25c3-4 7-6 11-6"/>
+      </g>
+    </symbol>
+  </svg>
+
+  <script src="js/main.js" defer></script>
+  <script src="js/motion.js" defer></script>
+  <script src="js/smoke.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="js/feast.js" defer></script>
+</body>
+</html>
